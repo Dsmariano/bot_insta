@@ -40,7 +40,7 @@ comentarios = 0
 for hashtag in hashtag_list:
     tag = tag + 1
     tamb = '(//*[@class="_aagw"])[1]'
-    texto_seguir = "//*[@class='_aacl _aaco _aacw _aad6 _aade']/text()"
+    texto_seguir = "//*[@class='_aacl _aaco _aacw _aad6 _aade']"
     # curti = "(//*[@class='x6s0dn4 x78zum5 xdt5ytf xl56j7k'])[3]"
     # comentar = "(//*[@class='x6s0dn4 x78zum5 xdt5ytf xl56j7k'])[4]"
     primeira_avanca = '(//*[@class="_abm0"])[1]'
@@ -50,12 +50,13 @@ for hashtag in hashtag_list:
     sleep(5)
     
     driver.find_element('xpath', tamb).click()
+    driver.find_element('xpath', primeira_avanca).click()
     #primeira_thumb.click()
     
     sleep(randint(2,3))
     try:
         for _ in range(1,200):
-            driver.find_element('xpath', primeira_avanca).click()
+            
             
             sleep(randint(1, 2)) 
             usuario = driver.find_element('xpath', texto_seguir).text
