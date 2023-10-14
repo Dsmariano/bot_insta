@@ -1,0 +1,7 @@
+.venv
+.env
+api.py
+insta.ipymb
+requirements.txt
+__pycache__
+.vscode
